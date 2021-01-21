@@ -59,7 +59,7 @@ export default {
     edit(id) {
       let windowName = "EditUser";
       if (this.windowPerUser) windowName += id;
-      let url = "vue.window/#/edituser/" + id;
+      let url = "#/edituser/" + id;
       let options = "resizable=no,scrollbars=no,status=no";
       options += ",height=" + this.height;
       options += ",width=" + this.width;
