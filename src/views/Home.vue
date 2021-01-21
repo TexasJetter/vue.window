@@ -31,6 +31,7 @@
       To communicate between different windows you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel" target="_blank">BroadCastChannel API</a>, however it does not supported by older browsers or Safari. This site
       is using a NPM package (<a href="https://www.npmjs.com/package/broadcast-channel" target="_blank">broadcast channel</a>) that brings support to 'all' broswers.
     </p>
+    <p>Broadcast-channel can be thought of as an event bus that works across same domain windows. You create a channel with a key name, then any window can listen to events on that channel and act accordingly.</p>
   </div>
 </template>
 
