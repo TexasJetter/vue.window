@@ -21,14 +21,16 @@
       <br />
       <p>* Top/Left are relative to the primary screen. If the user has multiple monitors the new window will always open on the primary screen.</p>
       <p>Once a windows is opened it will remember it's location if minimized, even if it is moved to a second screen. (it will NOT be remembered if you close the window)</p>
-      <p>
-        How does this work? Browsers have supported JavaScript <code>window.open</code> for years, but we seldom take advantage of it's options.<br />
-        <code>window.open(<i>url</i>, <i>name</i>, <i>options</i>)</code><br />
-        So when opening a new window here we callilng it like so:<br />
-        <code>window.open('edituser/1', 'EditUser', <br />'resizable=no,scrollbars=no,status=no,height=150,width=300,top=300,left=300')</code><br />
-      </p>
-      <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">Mozilla Docs</a> for more information.</p>
     </div>
+    <p>
+      How does this work? Browsers have supported JavaScript <code>window.open</code> for years, but we seldom take advantage of it's options.<br /><code>window.open(<i>url</i>, <i>name</i>, <i>options</i>)</code><br />
+      So when opening a new window here we callilng it like so:<br /><code>window.open('edituser/1', 'EditUser', <br />'resizable=no,scrollbars=no,status=no,height=150,width=300,top=300,left=300')</code><br />
+    </p>
+    <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">Mozilla Docs</a> for more information.</p>
+    <p>
+      To communicate between different windows you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel" target="_blank">BroadCastChannel API</a>, however it does not supported by older browsers or Safari. This site
+      is using a NPM package (<a href="https://www.npmjs.com/package/broadcast-channel" target="_blank">broadcast channel</a>) that brings support to 'all' broswers.
+    </p>
   </div>
 </template>
 
