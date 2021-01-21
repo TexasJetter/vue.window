@@ -34,8 +34,17 @@ export default {
     },
   },
   computed: {},
-  watch: {},
+  watch: {
+    "$route.params.id": {
+      handler: function(newValue, oldValue) {
+        if (newValue != oldValue) this.load(newValue);
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
   mounted: function() {
+    console.log(this.$route);
     const params = this.$route.params;
     let id = 0;
     if (params != null && params.id != null) id = params.id;
